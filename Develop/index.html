@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+
+        <p>Select below the criteria you'd like to include in your password :)</p>
+        <ul>
+          <li><input type="checkbox" id="checkLower" onclick="myFunction()">
+            <label for="checkLower">lowercase</label>
+          </li>
+          <li><input type="checkbox" id="checkUpper" onclick="myFunction()">
+            <label for="checkUpper">uppercase</label>
+          </li>
+          <li><input type="checkbox" id="checkNumeric" onclick="myFunction()">
+            <label for="checkNumeric">numeric</label>
+          </li>
+          <li><input type="checkbox" id="checkSpecial" onclick="myFunction()">
+            <label for="checkSpecial">special character</label>
+          </li>
+
+        </ul>
+<p> Enter desired length (8-128 characters):</p>
+<div class="input-group input-group-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg"></span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+</div>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
