@@ -23,26 +23,28 @@
 
         <p>Select below the criteria you'd like to include in your password :)</p>
         <ul>
-          <li><input type="checkbox" id="checkLower" onclick="myFunction()">
+          <li><input type="checkbox" id="checkLower" onclick="generatePassword()">
             <label for="checkLower">lowercase</label>
           </li>
-          <li><input type="checkbox" id="checkUpper" onclick="myFunction()">
+          <li><input type="checkbox" id="checkUpper" onclick="generatePassword()">
             <label for="checkUpper">uppercase</label>
           </li>
-          <li><input type="checkbox" id="checkNumeric" onclick="myFunction()">
+          <li><input type="checkbox" id="checkNumeric" onclick="generatePassword()">
             <label for="checkNumeric">numeric</label>
           </li>
-          <li><input type="checkbox" id="checkSpecial" onclick="myFunction()">
+          <li><input type="checkbox" id="checkSpecial" onclick="generatePassword()">
             <label for="checkSpecial">special character</label>
           </li>
 
         </ul>
-<p> Enter desired length (8-128 characters):</p>
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-lg"></span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
+        <!-- Prompted for the length of the password -->
+        <!-- I choose a length of at least 8 characters and no more than 128 characters -->
+        <p> Enter desired length (8-128 characters):</p>
+          <div class="input-group input-group-lg">
+            <input type="number" id="length" min='8' max= '128'>
+          </div>
       </div>
+
       <div class="card-footer">
         <button id="generate" class="btn">Generate Password
         </button>
