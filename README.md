@@ -22,3 +22,6 @@ I would like to return to this previous challenge and solve how to display the p
 ![Image of PasswordGenerator](./assets/passwordGenerator.png)
 
 ## Links
+https://github.com/librarylilou/hw03-passwordGenerator
+
+https://librarylilou.github.io/hw03-passwordGenerator/
