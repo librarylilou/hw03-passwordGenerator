@@ -30,7 +30,7 @@ generateBtn.addEventListener("click", () => {
     hasSpecial,
     length
   );
-});
+})
 
 // Function generate password to the #password input
 
@@ -38,14 +38,14 @@ function generatePassword(lower, upper, number, special, length) {
   let generatePassword = '';
   const criteriaChecked = lower + upper + number + special;
 
-  //console.log("criteriaChecked:", criteriaChecked);
+  console.log("criteriaChecked:", criteriaChecked);
   // Array for criteria checking
   const criteriaArray = [{ lower }, { upper }, { number }, { special }].filter
     (
       item => Object.values(item)[0]
     );
 
-  //console.log("criteriaArray:", criteriaArray);
+  console.log("criteriaArray:", criteriaArray);
   // If none of the criteria boxes are checked
   if (criteriaChecked === 0) {
     return "";
@@ -54,16 +54,15 @@ function generatePassword(lower, upper, number, special, length) {
   // For-loop used to generate password
   for (let i = 0; i < length; i += criteriaChecked) {
     criteriaArray.forEach(type => {
-      const passName = Object.keys(type)[0];
+      const writePassword = Object.keys(type)[0];
 
-      generatePassword += randomPass[passName]();
+      generatePassword += randomPass[writePassword]();
     });
   }
-  
-}
-const thePassword = generatePassword.slice(0, length);
+  const thePassword = generatePassword.slice(0, length);
 
-return thePassword;
+  return thePassword; 
+};
 
 // Functions for criteria--
 // function for lower case
